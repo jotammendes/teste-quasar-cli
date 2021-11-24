@@ -9,10 +9,11 @@
         align-items: center;
       "
     >
-      <img src="https://cdn.quasar.dev/img/mountains.jpg" ratio="1" width="200px"
-      />
-
       <q-card-section class="full-width">
+        <img class="full-width" src="../../assets/quasar-logo-vertical.svg" ratio="16:9" width="200px" />
+      </q-card-section>
+
+      <q-card-section class="full-width q-pt-none">
         <p class="text-h5 text-center q-mb-none">Esqueci minha senha</p>
       </q-card-section>
 
