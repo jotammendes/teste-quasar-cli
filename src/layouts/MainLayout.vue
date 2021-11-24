@@ -90,6 +90,12 @@ const linksList = [
     caption: 'Community Quasar projects',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
+  },
+  {
+    title: 'Logout',
+    caption: 'Sair do sistema administrativo',
+    icon: 'exit_to_app',
+    link: '/'
   }
 ]
 
