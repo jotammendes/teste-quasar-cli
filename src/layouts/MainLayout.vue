@@ -15,7 +15,23 @@
           Quasar App
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <q-select
+            v-model="locale"
+            :options="localeOptions"
+            :label="$t('quasar_language')"
+            dense
+            borderless
+            emit-value
+            map-options
+            options-dense
+            dark
+            style="min-width: 150px;"
+          />
+        </div>
+        <div>
+          Quasar v{{ $q.version }}
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -47,6 +63,8 @@
 
 <script lang="ts">
 import EssentialLink from 'components/EssentialLink.vue'
+// import { ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const linksList = [
   {
@@ -110,13 +128,19 @@ export default defineComponent({
 
   setup () {
     const leftDrawerOpen = ref(false)
+    const { locale } = useI18n({ useScope: 'global' })
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
+      locale,
+      localeOptions: [
+        { value: 'en-US', label: 'English' },
+        { value: 'pt-BR', label: 'Portuguese' }
+      ]
     }
   }
 })

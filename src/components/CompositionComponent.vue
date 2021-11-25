@@ -6,9 +6,9 @@
         {{ todo.id }} - {{ todo.content }}
       </li>
     </ul>
-    <p>Count: {{ todoCount }} / {{ meta.totalCount }}</p>
-    <p>Active: {{ active ? 'yes' : 'no' }}</p>
-    <p>Clicks on todos: {{ clickCount }}</p>
+    <p>{{  $t('count') }}: {{ todoCount }} / {{ meta.totalCount }}</p>
+    <p>{{  $t('active') }}: {{ active ? 'yes' : 'no' }}</p>
+    <p>{{  $t('clicks_on_todos') }}: {{ clickCount }}</p>
   </div>
 </template>
 
